@@ -1,0 +1,22 @@
+.section-header {
+    text-align: center;
+    padding: 102px 0;
+    &__title {
+        font-size: 36px;
+        font-family: "Myriad Pro";
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        line-height: 1.222;
+        margin-bottom: 54px;
+        font-weight: 400;
+    }
+
+    &__descr {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        line-height: 1.5;
+        max-width: 860px;
+        margin: auto;
+        font-family: "Futura PT Book";
+    }
+}

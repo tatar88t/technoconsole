@@ -1,0 +1,312 @@
+.main-order {
+  background-color: $header-color;
+  padding-bottom: 108px;
+
+  .section-header {
+    &__title,
+    &__descr {
+      color: #fff;
+    }
+  }
+
+  &-constructor {
+    display: flex;
+    font-family: 'Futura PT Book';
+  }
+
+  &-models {
+    max-width: 889px;
+
+    .slick-slider .slick-list {
+      box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .slider__order-models {
+      .slick-arrow {
+        height: 26px;
+        visibility: hidden;
+      }
+      .slick-next {
+        display: none !important;
+      }
+
+      .slick-dots {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        & li {
+          position: relative;
+          width: 100%;
+          height: 8px;
+          list-style: none;
+          background: #4f4f4f;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            &::before {
+              content: '1. Базовая модель';
+              position: absolute;
+              bottom: 23px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: rgba(255, 255, 255, 0.502);
+            }
+          }
+
+          &:nth-child(2) {
+            background: #666666;
+
+            &::before {
+              content: '2. Базовая модель';
+              position: absolute;
+              bottom: 23px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: rgba(255, 255, 255, 0.502);
+            }
+          }
+
+          &:nth-child(3) {
+            &::before {
+              content: '3. Конфигурация';
+              position: absolute;
+              bottom: 23px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: rgba(255, 255, 255, 0.502);
+            }
+          }
+
+          & button {
+            visibility: hidden;
+          }
+
+          &.slick-active {
+            background: $btn-blue;
+
+            &::before {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 69px 161px 33px 144px;
+        background: $prom-grey;
+        border-radius: 6px;
+
+        & img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &-options {
+    margin-left: 22px;
+    border-radius: 6px;
+    min-height: 636px; ///--------------------------------
+
+    .slider__order-options {
+      &-header {
+        display: flex;
+        height: 26px;
+
+        & span {
+          color: #fff;
+          min-width: 192px;
+          padding-left: 50px;
+          line-height: 0.1;
+        }
+
+        & div {
+          position: relative;
+          width: 100%;
+          height: 26px;
+          background: $cards-grey;
+          border-top-right-radius: 6px;
+          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -52px;
+            width: 0;
+            height: 0;
+            border-bottom: 26px solid $cards-grey;
+            border-left: 52px solid transparent;
+          }
+        }
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 548px;
+        box-shadow: 0px 40px 20px 5px rgba(0, 0, 0, 0.4);
+        &:first-child .order-options-card {
+          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+        }
+        .order-options-card {
+          & input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+          }
+
+          & input + label {
+            display: flex;
+            //---------------------------------
+            flex: 1 1 auto;
+            align-items: center;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            max-width: 450px;
+            padding: 36px 27px 56px 110px;
+            user-select: none;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.2;
+            background: $cards-grey;
+            border-bottom: 1px solid $header-color;
+
+            &::before {
+              content: '';
+              display: inline-block;
+              flex-grow: 0;
+              flex-shrink: 0;
+              position: absolute;
+              top: 50%;
+
+              left: 40px;
+              width: 20px;
+              height: 20px;
+              border: 1px solid $prom-grey;
+              transform: translateY(-50%);
+              border-radius: 50%;
+              background: transparent;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: 50% 50%;
+            }
+          }
+
+          & input:checked + label::before {
+            border: 1px solid #0b76ef;
+            border-radius: 50%;
+
+            background: radial-gradient(#fff 0%, #fff 30%, $btn-blue 30%);
+          }
+
+          & label {
+            & .descr {
+              color: #fff;
+              max-width: 176px;
+              line-height: 1.5;
+            }
+
+            & img {
+              margin-right: 26px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      &-nav {
+        display: flex;
+        height: 84px;
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+
+        & button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          border: none;
+          transition: 0.3s all;
+          background: $cards-grey;
+          cursor: pointer;
+          outline: none;
+          border-bottom-left-radius: 6px;
+          font-size: 16px;
+          color: #fff;
+
+          &:hover {
+            color: $btn-blue;
+          }
+
+          & img {
+            width: 30px;
+            margin-right: 24px;
+          }
+
+          &:nth-child(2) {
+            flex-direction: row-reverse;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 6px;
+
+            & img {
+              margin-right: 0;
+              margin-left: 24px;
+            }
+          }
+        }
+
+        &-prev {
+          & .arrow {
+            width: 30px;
+            height: 10px;
+            transition: 0.3s all;
+            background: url('../img/svg/arrow-prev-thin.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-right: 24px;
+          }
+
+          &:hover {
+            & .arrow {
+              background: url('../img/svg/arrow-prev-thin-blue.svg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+            }
+          }
+        }
+
+        &-next {
+          & .arrow {
+            width: 30px;
+            height: 10px;
+            transition: 0.3s all;
+            background: url('../img/svg/arrow-next-thin.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-right: 0;
+            margin-left: 24px;
+          }
+
+          &:hover {
+            & .arrow {
+              background: url('../img/svg/arrow-next-thin-blue.svg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

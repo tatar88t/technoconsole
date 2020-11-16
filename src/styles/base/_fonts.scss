@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro/MyriadPro-Regular.eot');
+  src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+    url('../fonts/MyriadPro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro/MyriadPro-Regular.woff') format('woff'),
+    url('../fonts/MyriadPro/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro/MyriadPro-Light.eot');
+  src: local('Myriad Pro Light'), local('MyriadPro-Light'),
+    url('../fonts/MyriadPro/MyriadPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro/MyriadPro-Light.woff') format('woff'),
+    url('../fonts/MyriadPro/MyriadPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../fonts/FuturaPT/futura_pt_book.eot');
+  src: url('../fonts/FuturaPT/futura_pt_book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT/futura_pt_book.woff2') format('woff2'),
+    url('../fonts/FuturaPT/futura_pt_book.woff') format('woff'),
+    url('../fonts/FuturaPT/futura_pt_book.ttf') format('truetype'),
+    url('../fonts/FuturaPT/futura_pt_book.svg#futura_pt_book') format('svg');
+}
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url('../fonts/FuturaPT/futura_pt_demi.eot');
+  src: url('../fonts/FuturaPT/futura_pt_demi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT/futura_pt_demi.woff2') format('woff2'),
+    url('../fonts/FuturaPT/futura_pt_demi.woff') format('woff'),
+    url('../fonts/FuturaPT/futura_pt_demi.ttf') format('truetype'),
+    url('../fonts/FuturaPT/futura_pt_demi.svg#futura_pt_demi') format('svg');
+}

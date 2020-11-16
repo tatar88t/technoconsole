@@ -1,0 +1,84 @@
+.main-projects {
+    position: relative;
+
+    .slider__projects {
+        position: relative;
+        .slide {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 224px 0 218px;
+
+            &-logo {
+                margin-bottom: 24px;
+            }
+        }
+
+        .slick-dots {
+            display: flex;
+            position: absolute;
+            bottom: 117px;
+            left: 290px;
+
+            & li {
+                width: 30px;
+                height: 3px;
+                background: #4a4848;
+                list-style: none;
+                cursor: pointer;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                &.slick-active {
+                    background: #fff;
+                }
+            }
+
+            & button {
+                visibility: hidden;
+            }
+        }
+
+        & .slick-arrow {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            border: none;
+            transform: translateY(-50%);
+            transition: 0.3s all;
+            background-color: transparent;
+            font-size: 0;
+            background-image: url("../img/svg/shevron-prev.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            outline: none;
+        }
+
+        & .slick-prev {
+            left: 47px;
+
+            &:hover {
+                background-image: url("../img/svg/shevron-prev-blue.svg");
+            }
+        }
+
+        & .slick-next {
+            right: 47px;
+            background-image: url("../img/svg/shevron-next.svg");
+
+            &:hover {
+                background-image: url("../img/svg/shevron-next-blue.svg");
+            }
+        }
+    }
+
+    &__header {
+        position: relative;
+        z-index: 3;
+    }
+}

@@ -1,0 +1,28 @@
+.main-order
+    .container
+        +section-header("Заказать в 3 шага", "Мы не просто реализуем качественную продукцию, мы воплощаем в жизнь проект, позволяющий эффективно организовать профессиональную деятельность путем тщательного планирования рабочего места. Мы воплощаем в жизнь проект, позволяющий эффективно организовать профессиональную.")
+        .main-order-constructor
+            .main-order-models
+                .slider__order-models
+                    .slider__order-models-item
+                        img(src="img/order-model-1.png", alt="desk")
+                    .slider__order-models-item
+                        img(src="img/order-model-1.png", alt="desk")
+                    .slider__order-models-item
+                        img(src="img/order-model-1.png", alt="desk")
+            .main-order-options
+                .slider__order-options
+                    .slider__order-options-wrapper
+                        .slider__order-options-header
+                            span Варианты
+                            div
+                        +order-options-card("options", "option-1", "img/order-option-1.png", "Форма диспетчерского пульта максимально соответствует эргономике человека")
+                        +order-options-card("options", "option-2", "img/order-option-2.png", "Эргономичный вырез столешницы со стороны оператора")
+                        +order-options-card("options", "option-3", "img/order-option-3.png", "Угловой стол с эргономически удобным вырезом")
+                    .slider__order-options-nav
+                        button.slider__order-options-nav-prev
+                            .arrow
+                            .text Назад
+                        button.slider__order-options-nav-next
+                            .arrow
+                            .text Далее

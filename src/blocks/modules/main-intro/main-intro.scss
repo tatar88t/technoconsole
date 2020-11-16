@@ -1,0 +1,105 @@
+.main-intro {
+    background: url("../img/bg-intro.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100%;
+    margin-top: 0;
+
+    font-size: 18px;
+    font-family: "FuturaPT";
+
+    &__nav {
+        padding: 25px 0 0 0;
+        font-size: 18px;
+        font-family: "Futura PT Demi";
+
+        & ul {
+            display: flex;
+
+            & li {
+                list-style: none;
+
+                &:not(:last-child) {
+                    margin-right: 46px;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    transition: 0.3s all;
+
+                    &:hover {
+                        color: $btn-blue;
+                    }
+                }
+            }
+        }
+
+        &-lock {
+            padding-top: 25px;
+            margin-left: -36px;
+
+            & button {
+                position: relative;
+                width: 20px;
+                height: 16px;
+                border: 2px solid #fff;
+                transition: 0.3s all;
+                color: #fff;
+                cursor: pointer;
+                background: transparent;
+                border-radius: 4px;
+
+                &:hover {
+                    border-color: $btn-blue;
+
+                    &::before {
+                        border-color: $btn-blue;
+                        color: $btn-blue;
+                    }
+                }
+            }
+
+            & button:first-child {
+                margin-right: 20px;
+
+                &::before {
+                    content: "i";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 0.3s all;
+                    font-family: "Myriad Pro";
+                    font-size: 9px;
+                }
+            }
+
+            & button:last-child {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -9px;
+                    left: 50%;
+                    width: 13px;
+                    height: 9px;
+                    border: 2px solid #fff;
+                    transform: translateX(-50%);
+                    transition: 0.3s all;
+                    border-radius: 3px;
+                }
+
+                &:hover {
+                    &::before {
+                        border-color: $btn-blue;
+                        color: $btn-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 210px 0 246px;
+    }
+}

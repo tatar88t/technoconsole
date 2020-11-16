@@ -1,0 +1,45 @@
+.main-products {
+    position: relative;
+
+    &__controllers {
+        position: relative;
+        z-index: 15;
+        padding: 160px 100px 176px 0;
+        background: url("../img/controllers-room-bg.png") no-repeat;
+        background-position: top;
+        background-size: cover;
+        clip-path: polygon(50% 0%, 100% 0, 100% calc(100% - 36px), 475px calc(100% - 36px), 425px 100%, 0 100%, 0 0);
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 36px;
+            width: 28px;
+            height: 9px;
+            background: #fff;
+        }
+    }
+
+    &__meet-rooms {
+        position: relative;
+        background: url("../img/meeting-rooms-bg.jpg") no-repeat;
+        background-position: top;
+        background-size: cover;
+        z-index: 14;
+        margin-top: -46px;
+        padding: 195px 0 126px 0;
+
+        clip-path: polygon(70% 0, 100% 0, 100% calc(100% - 36px), calc(100% - 425px) calc(100% - 36px), calc(100% - 475px) 100%, 0 100%, 0 0);
+    }
+
+    &__smart-office {
+        position: relative;
+        background: url("../img/smart-office-bg.jpg") no-repeat;
+        background-position: top;
+        background-size: cover;
+        padding: 202px 125px 170px 0;
+        margin-top: -36px;
+    }
+}

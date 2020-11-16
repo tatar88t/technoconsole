@@ -1,0 +1,119 @@
+.header {
+    background: $header-color;
+    height: 64px;
+    color: $menu-grey-text;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+
+    &__logo {
+        position: absolute;
+        z-index: 5;
+        top: 36px;
+        left: 4px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            top: 28px;
+            right: -24px;
+            width: 400%;
+            height: 42px;
+            background: $header-color;
+            border-bottom-right-radius: 50px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 20px;
+            left: 234px;
+            width: 0;
+            height: 0;
+            border-top: 44px solid $header-color;
+            border-right: 93px solid transparent;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 9;
+        height: 64px;
+
+        a {
+            color: $menu-grey-text;
+            text-decoration: none;
+        }
+    }
+
+    &-contacts {
+        a {
+            transition: 0.3s all;
+
+            &:hover {
+                color: darken($menu-grey-text, 15%);
+            }
+
+            &:first-child {
+                margin-right: 22px;
+            }
+        }
+    }
+    &-social {
+        & a {
+            &:hover {
+                background: darken($menu-grey-text, 15%);
+            }
+        }
+    }
+
+    &__nav {
+        margin-right: 40px;
+
+        & ul {
+            display: flex;
+
+            & li {
+                list-style: none;
+
+                &:not(:last-child) {
+                    margin-right: 28px;
+                }
+
+                & a {
+                    transition: 0.3s all;
+                    &:hover {
+                        color: darken($menu-grey-text, 15%);
+                    }
+                }
+            }
+        }
+    }
+
+    &-lang {
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s all;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -14px;
+            bottom: 2px;
+            width: 8px;
+            height: 6px;
+            background: url("../img/triangle-more-blue.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &:hover {
+            color: darken($menu-grey-text, 15%);
+        }
+    }
+}

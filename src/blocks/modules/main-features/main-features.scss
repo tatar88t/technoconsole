@@ -1,0 +1,46 @@
+.main-features {
+    position: relative;
+    background: $milk-white;
+    padding: 0 0 104px 0;
+
+    .section-header {
+        padding-bottom: 50px;
+    }
+
+    & .ledge-top_white, .ledge-bottom_white {
+        background: $milk-white;
+
+        &::before {
+            border-bottom-color: $milk-white;
+            border-top-color: $milk-white;
+        }
+
+        &::after {
+            border-left-color: $milk-white;
+        }
+    }
+
+    &-prods {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 42px 45px 50px 43px;
+            border-radius: 4px;
+            background: #fff;
+
+            & .descr {
+                max-width: 173px;
+                text-align: center;
+                font-family: "Futura PT Book";
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    }
+}

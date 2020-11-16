@@ -1,0 +1,78 @@
+.footer {
+    position: relative;
+    padding: 108px 0 102px 0;
+    background: #000000;
+    margin-top: 80px;
+
+    &-menu {
+        & h4 {
+            font-family: "Futura PT Demi";
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            line-height: 1.5;
+            margin-bottom: 26px;
+        }
+
+        & a {
+            transition: 0.3s all;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: "Futura PT Book";
+
+            &:hover {
+                color: darken(#fff, 15%);
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        height: 98px;
+        background: $header-color;
+
+        & .row {
+            align-items: center;
+            height: 17px;
+        }
+
+        & a {
+            transition: 0.3s all;
+            font-family: "Myriad Pro";
+            color: $menu-grey-text;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: darken($menu-grey-text, 15%);
+            }
+        }
+
+        &-phone {
+            margin-left: -52px;
+            font-size: 20px;
+        }
+
+        &-email {
+            margin-left: -42px;
+            font-size: 15px;
+        }
+
+        &-social {
+            & a {
+                background: #fff;
+
+                &:hover {
+                    background: darken(#fff, 15%);
+                }
+            }
+        }
+
+        &-address {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.order-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -65px;
+    bottom: 50%;
+    width: 184px;
+    height: 54px;
+    transform: translateY(50%) rotate(-90deg);
+    transition: 0.3s all;
+    background: linear-gradient(0deg, #323233 0%, #343435 50%, #4d4d4d 75%, #4a4a4a 80%);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    padding-top: 10px;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 172px;
+        height: 49px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        // border-top: 2px dashed $btn-blue;
+        border-right: 3px solid $btn-blue;
+        border-left: 3px solid $btn-blue;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 17px;
+        width: 154px;
+        height: 4px;
+        transform: scaleX(1.03);
+        background-image: linear-gradient(to right, $btn-blue 82%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 22px 3px;
+        background-repeat: repeat-x;
+    }
+
+    &:hover {
+        & .order-side-lock {
+            border-color: $btn-blue;
+
+            &::before {
+                border-color: $btn-blue;
+            }
+        }
+
+        & .order-side-text {
+            color: $btn-blue;
+        }
+    }
+
+    &-lock {
+        position: relative;
+        width: 20px;
+        height: 16px;
+        border: 2px solid #c0c0c0;
+        transition: 0.3s all;
+        border-radius: 4px;
+        margin-right: 14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            width: 12px;
+            height: 8px;
+            border: 2px solid #c0c0c0;
+            transform: translateX(-50%);
+            transition: 0.3s all;
+        }
+    }
+
+    &-text {
+        transition: 0.3s all;
+        color: #c0c0c0;
+        font-family: "Futura PT Demi";
+        font-size: 16px;
+    }
+}

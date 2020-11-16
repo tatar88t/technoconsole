@@ -1,0 +1,56 @@
+.btn-primory {
+    text-decoration: none;
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 190px;
+        height: 60px;
+        border: none;
+        padding: 24px 36px 24px 40px;
+        transition: 0.3s all;
+        color: #ffffff;
+        border-radius: 4px;
+        background: $btn-blue;
+        outline: none;
+        font-family: "Roboto";
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            background: darken($btn-blue, 15%);
+        }
+    }
+}
+
+.btn-secondary {
+    text-decoration: none;
+    & button {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 60px;
+        border: 2px solid #fff;
+        padding: 22px 40px 22px 40px;
+        transition: 0.3s all;
+        background: transparent;
+        border-radius: 4px;
+        color: #ffffff;
+        margin-right: 20px;
+        font-family: "Roboto";
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            color: $btn-blue;
+        }
+    }
+}
+.btns-order {
+    display: flex;
+    margin-top: 50px;
+}

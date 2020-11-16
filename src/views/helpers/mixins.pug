@@ -1,0 +1,54 @@
+mixin btn-primory (btnlabel, ref)
+    a.btn-primory(href=ref)
+        button.btn=btnlabel
+            img(src="img/svg/arrow-next-thin.svg", alt="Стрелка")
+
+mixin btn-secondary(btnlabel, ref)
+    a.btn-secondary(href=ref)
+        button.btn=btnlabel
+
+mixin btns-order(label_1, ref_2, label_2, ref_2)
+    .btns-order
+        a.btn-secondary(href=ref_2)
+            button.btn=label_1
+        a.btn-primory(href=ref_1)
+            button.btn=label_2
+                img(src="img/arrow-btn.png", alt="Стрелка")
+        
+mixin section-header(title, descr)
+    .section-header
+        h2.section-header__title=title
+        p.section-header__descr=descr
+
+mixin models-count(count)
+    .models-count
+        .count=count
+        .text Моделей
+
+mixin feature-item(src, alt, descr)
+    .feature-item
+        img(src=src, alt=alt)
+        .descr=descr
+
+mixin order-options-card(name, id, src, descr)
+     .order-options-card
+            input(type="radio" name=name id=id)
+            label(for=id)
+                img(src=src, alt="option")
+                .descr=descr
+
+mixin main-news__slider-item(bgurl, date, title, descr, bgurl1, date1, title1, bgurl2, date2, title2)
+    .main-news__slider-grid
+        .main-news__slider-item(style=bgurl)
+            .main-news__slider-item-date=date
+            .main-news__slider-item-title=title
+            .main-news__slider-item-descr=descr
+            .main-news__slider-item-arrow
+        .main-news__slider-thumb-item(style=bgurl1)
+            .main-news__slider-thumb-item-date=date1
+            .main-news__slider-thumb-item-title=title1
+            .main-news__slider-thumb-item-arrow
+        .main-news__slider-thumb-item(style=bgurl2)
+            .main-news__slider-thumb-item-date=date2
+            .main-news__slider-thumb-item-title=title2
+            .main-news__slider-thumb-item-arrow
